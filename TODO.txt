@@ -1,0 +1,23 @@
+
+
+views.py - games
+
+Filter 'Your Games' by user 
+Filter 'Open Games' by user
+
+
+
+views.py - play
+
+bug with refreshing page after choice submitted
+update grid to heatmap : https://plot.ly/python/heatmaps/
+work on games that only have one player
+error returned if its not your turn
+
+
+
+views.py - check_if_won
+
+Finish writting function 'check_if_won' which works out if 4 coins are in a row.
+
+
