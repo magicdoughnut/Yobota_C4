@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+You are logged in as:
+{{ UserName }}
+
+<h1> Your Games</h1>
+
+{% for game in yourGames.all %}
+
+<br><a href="http://127.0.0.1:8000/connect4/play/{{ game.id }}/">{{ game.player1 }} vs {{ game.player2 }} <br/> {{ game.status }}</a><br/>
+ 
+
+
+<br>
+{% endfor %}
+
+
+
+<h1> Open Games</h1>
+
+{% for game in yourGames.all %}
+
+{{ game.player1 }}
+vs
+{{ game.player2 }}
+ 
+{{ game.status }}
+
+<br>
+{% endfor %}
+
+<br>
+<br>
+
+<form  method = "POST" action = "{%url 'games' %}"> {% csrf_token %}
+  <input type="submit" name="newGame" value="newGame" />
+</form>
+
+
+{% endblock %}
+
+

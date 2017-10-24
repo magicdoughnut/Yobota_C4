@@ -1,0 +1,4 @@
+virtual environment = venv
+	source venv/bin/activate
+	deactivate
+	pip freeze		#see all installed apps
