@@ -18,11 +18,8 @@ class Game(models.Model):
     def __str__(self):
         if self.player2:
             return ' vs '.join([self.player1.get_full_name(), self.player2.get_full_name()])
-            # return ' vs '.join([self.player1.related_name, self.player2.related_name])
-
         else:
             return 'Join now to play %s'%self.player1.get_short_name()
-            # return 'Join now to play %s'%self.player1.related_name
 
     @property
     def start_date(self):

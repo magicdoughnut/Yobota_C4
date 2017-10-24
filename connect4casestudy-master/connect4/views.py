@@ -53,9 +53,6 @@ def games(request):
     :param request:
     :return:
     """
-
-
-    # yourGames = Game.objects
     yourGames = Game.objects
     # qs = Game.objects.filter(status="Finished")
     # print qs.query
@@ -72,7 +69,6 @@ def games(request):
     else:
         pass
 
-    # return HttpResponse('GamesPage')
     return render(request,'connect4/games.html',{'yourGames':yourGames,'UserName':UserName})
 
 
@@ -88,7 +84,6 @@ def make_grid(coins,game_id):
         if str(coin.player) == str(currentGame.player2):
             grid[int(coin.row),int(coin.column)] = 2
 
-    # grid = np.flipud(grid)
     for line in grid:
         print line
 
